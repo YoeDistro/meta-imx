@@ -125,18 +125,8 @@ S = "${WORKDIR}/git"
 
 inherit use-imx-headers
 
-PACKAGECONFIG_GL:imxgpu2d = \
-    "${@bb.utils.contains('DISTRO_FEATURES', 'opengl x11', 'opengl', '', d)}"
-PACKAGECONFIG_GL:imxgpu3d = \
-    "${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'gles2 egl', '', d)}"
-PACKAGECONFIG_GL:use-mainline-bsp = \
-    "${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'gles2 egl gbm', '', d)}"
-
 PACKAGECONFIG:remove = "${PACKAGECONFIG_REMOVE}"
 PACKAGECONFIG_REMOVE ?= "jpeg"
-
-PACKAGECONFIG_GL:imxgpu2d:append:mx6-nxp-bsp = " viv-fb"
-PACKAGECONFIG_GL:imxgpu2d:append:mx7-nxp-bsp = " viv-fb"
 
 PACKAGECONFIG:append = " ${PACKAGECONFIG_G2D}"
 PACKAGECONFIG_G2D          ??= ""
