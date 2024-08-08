@@ -86,7 +86,7 @@ Origin:                      NXP (BSD-3-Clause)
 
 --------------------------------------------
 
-Package:                     imx-sc-firmware-1.17.0-a1f1a01.bin
+Package:                     imx-sc-firmware-1.17.0-83624b9.bin
 Version:                     1.17.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -131,7 +131,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     firmware-ele-imx-0.1.3-e6e0d6c.bin
+Package:                     firmware-ele-imx-0.1.3-d76e609.bin
 Version:                     0.1.3
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -302,8 +302,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     sof-zephyr-2.10.0
-Version:                     2.10.0
+Package:                     sof-zephyr-2.11.0
+Version:                     2.11.0
 Outgoing License:            BSD-3-Clause 
 License File:                LICENCE
 Package Category:            BSP
@@ -556,7 +556,7 @@ Origin:                      NXP (Apache-2.0)
                              OpenSSL 1.1 (OpenSSL License) - https://github.com/openssl/openssl/tree/OpenSSL_1_1_1-stable
 --------------------------------------------
 
-Package:                     ecdsa-lib-imx-3.3.3.bin
+Package:                     ecdsa-lib-imx-3.3.3-dd6eac8.bin
 Version:                     3.3.3
 Outgoing License:            LA_OPT_NXP_Software_License v53 December 2023 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -650,7 +650,7 @@ Origin:                      VeriSilicon Holdings Co., Ltd. (GPL-2.0)
 
 --------------------------------------------
 
-Package:                     isp-imx-4.2.2.24.3-a114af7.bin
+Package:                     isp-imx-4.2.2.24.3-c73e0b8.bin
 Version:                     4.2.2.24.3
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -688,8 +688,8 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.8-aarch32-0b5dbcd.bin
-Version:                     6.4.11.p2.8
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch32-0b5dbcd.bin
+Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -707,8 +707,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.8-aarch64-0b5dbcd.bin
-Version:                     6.4.11.p2.8
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch64-0b5dbcd.bin
+Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -726,8 +726,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     mali-imx-r50.0-eabc88d.bin
-Version:                     r50.0
+Package:                     mali-imx-r50.2-1101dda.bin
+Version:                     r50.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -848,8 +848,8 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.8-arm-0b5dbcd.bin
-Version:                     6.4.11.p2.8
+Package:                     imx-gpu-g2d-6.4.11.p2.10-arm-0b5dbcd.bin
+Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -860,8 +860,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.8-aarch64-0b5dbcd.bin
-Version:                     6.4.11.p2.8
+Package:                     imx-gpu-g2d-6.4.11.p2.10-aarch64-0b5dbcd.bin
+Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -1005,8 +1005,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-parser-4.9.1-757b9dc.bin
-Version:                     4.9.1
+Package:                     imx-parser-4.9.2-93e2305.bin
+Version:                     4.9.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Multimedia
@@ -1109,8 +1109,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-opencl-converter-0.5.0-50d0e53.bin
-Version:                     0.5.0
+Package:                     imx-opencl-converter-0.6.0-9e06d88.bin
+Version:                     0.6.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Multimedia
