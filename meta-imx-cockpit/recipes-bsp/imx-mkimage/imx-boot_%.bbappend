@@ -4,8 +4,8 @@ MACHINE_COCKPIT = "imx8qm-cockpit-mek"
 do_compile:imx8qm-cockpit () {
     bbnote 8QM cockpit boot binary build
 
-    cp ${DEPLOY_DIR_IMAGE}/imx8qm_m4_TCM_power_mode_switch_m40.bin   ${BOOT_STAGING}/m4_image.bin
-    cp ${DEPLOY_DIR_IMAGE}/imx8qm_m4_TCM_power_mode_switch_m41.bin   ${BOOT_STAGING}/m4_1_image.bin
+    cp ${DEPLOY_DIR_IMAGE}/mcore-demos/imx8qm_m4_TCM_power_mode_switch_m40.bin   ${BOOT_STAGING}/m4_image.bin
+    cp ${DEPLOY_DIR_IMAGE}/mcore-demos/imx8qm_m4_TCM_power_mode_switch_m41.bin   ${BOOT_STAGING}/m4_1_image.bin
 
     cp ${DEPLOY_DIR_IMAGE}/${SECO_FIRMWARE_NAME} ${BOOT_STAGING}
 
