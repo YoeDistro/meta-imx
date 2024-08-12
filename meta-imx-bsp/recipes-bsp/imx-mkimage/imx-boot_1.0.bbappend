@@ -25,19 +25,19 @@ do_compile[depends] += "${IMX_M4_DEMOS}"
 do_compile:prepend() {
     case ${SOC_FAMILY} in
     mx8)
-        cp ${DEPLOY_DIR_IMAGE}/imx8qm_m4_TCM_power_mode_switch_m40.bin \
+        cp ${DEPLOY_DIR_IMAGE}/mcore-demos/imx8qm_m4_TCM_power_mode_switch_m40.bin \
                                                              ${BOOT_STAGING}/m4_image.bin
-        cp ${DEPLOY_DIR_IMAGE}/imx8qm_m4_TCM_power_mode_switch_m41.bin \
+        cp ${DEPLOY_DIR_IMAGE}/mcore-demos/imx8qm_m4_TCM_power_mode_switch_m41.bin \
                                                              ${BOOT_STAGING}/m4_1_image.bin
         ;;
     mx8x)
-        cp ${DEPLOY_DIR_IMAGE}/${M4_DEFAULT_IMAGE}           ${BOOT_STAGING}/m4_image.bin
+        cp ${DEPLOY_DIR_IMAGE}/mcore-demos/${M4_DEFAULT_IMAGE}           ${BOOT_STAGING}/m4_image.bin
         ;;
     mx8ulp)
-        cp ${DEPLOY_DIR_IMAGE}/${M4_DEFAULT_IMAGE}       ${BOOT_STAGING}/m33_image.bin
+        cp ${DEPLOY_DIR_IMAGE}/mcore-demos/${M4_DEFAULT_IMAGE}       ${BOOT_STAGING}/m33_image.bin
         ;;
     mx95)
-        cp ${DEPLOY_DIR_IMAGE}/${M4_DEFAULT_IMAGE}           ${BOOT_STAGING}/m7_image.bin
+        cp ${DEPLOY_DIR_IMAGE}/mcore-demos/${M4_DEFAULT_IMAGE}           ${BOOT_STAGING}/m7_image.bin
         ;;
     esac
 }
@@ -55,7 +55,7 @@ do_deploy:append() {
         install -m 0644 ${BOOT_STAGING}/m33_image.bin        ${DEPLOYDIR}/${BOOT_TOOLS}
         ;;
     mx95)
-        install -m 0644 ${DEPLOY_DIR_IMAGE}/${M4_DEFAULT_IMAGE}         ${DEPLOYDIR}/${BOOT_TOOLS}
+        install -m 0644 ${DEPLOY_DIR_IMAGE}/mcore-demos/${M4_DEFAULT_IMAGE}         ${DEPLOYDIR}/${BOOT_TOOLS}
         ;;
     esac
 
