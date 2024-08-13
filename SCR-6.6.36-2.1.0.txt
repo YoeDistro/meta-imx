@@ -476,7 +476,7 @@ Origin:                      NXP (BSD-3-Clause)
 --------------------------------------------
 
 Package:                     imx-smw.git
-Version:                     0.1
+Version:                     0.4
 Outgoing License:            BSD-3-Clause 
 License File:                LICENSE
 Package Category:            BSP
@@ -1676,7 +1676,7 @@ Origin:                      NXP (BSD-3-clause)
 --------------------------------------------
 
 Package:                     bcu.git
-Version:                     1.1.89
+Version:                     1.1.92
 Outgoing License:            BSD-3-Clause 
 License File:                LICENSE
 Package Category:            Tools
