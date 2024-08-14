@@ -15,12 +15,10 @@ require recipes-kernel/linux/linux-imx.inc
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
-DEPENDS += "lzop-native bc-native"
-
 SRC_URI = "${LINUX_IMX_SRC}"
 LINUX_IMX_SRC ?= "git://github.com/nxp-imx/linux-imx.git;protocol=https;branch=${SRCBRANCH}"
-KBRANCH = "${SRCBRANCH}"
 SRCBRANCH = "lf-6.6.y"
+KBRANCH = "${SRCBRANCH}"
 LOCALVERSION = "-lts-next"
 SRCREV = "27e133d2968c537b8cce58ace27e8d413f83957b"
 
@@ -91,32 +89,4 @@ do_merge_delta_config() {
 }
 addtask merge_delta_config before do_kernel_localversion after do_copy_defconfig
 
-do_kernel_configcheck[noexec] = "1"
-
-IMX_KERNEL_DEVICETREE_32BIT_COMPATIBILITY_UPDATE ?= "1"
-
-python imx_kernel_devicetree_32bit_compatibility_update() {
-    import os.path
-    import re
-    if d.getVar('IMX_KERNEL_DEVICETREE_32BIT_COMPATIBILITY_UPDATE') != "1":
-        return
-    new = ""
-    expanded = False
-    for devicetree in d.getVar('KERNEL_DEVICETREE').split():
-        if re.match("^imx[67]", devicetree):
-            expanded = True
-            new_devicetree = os.path.join("nxp/imx", devicetree)
-            new += new_devicetree + " "
-            bb.note("Devicetrees are moved to sub-folder nxp/imx, please fix KERNEL_DEVICETREE: %s -> %s" % (devicetree, new_devicetree))
-        else:
-            new += devicetree + " "
-    if expanded:
-        bb.warn("Updating KERNEL_DEVICETREE for move to sub-folder nxp/imx. Set IMX_KERNEL_DEVICETREE_32BIT_COMPATIBILITY_UPDATE = \"0\" to disable this.")
-        d.setVar('KERNEL_DEVICETREE', new)
-}
-addhandler imx_kernel_devicetree_32bit_compatibility_update
-imx_kernel_devicetree_32bit_compatibility_update[eventmask] = "bb.event.RecipeParsed"
-
-KERNEL_VERSION_SANITY_SKIP="1"
 COMPATIBLE_MACHINE = "(imx-nxp-bsp)"
-COMPATIBLE_MACHINE:mx91p-nxp-bsp = "(^$)"
