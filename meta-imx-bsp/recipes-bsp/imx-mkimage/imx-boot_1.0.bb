@@ -111,7 +111,8 @@ compile_mx8m() {
         cp ${DEPLOY_DIR_IMAGE}/${UBOOT_DTB_BINARY}           ${BOOT_STAGING}/${UBOOT_DTB_NAME}
     else
         cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${UBOOT_DTB_NAME_EXTRA} \
-                                                             ${BOOT_STAGING}/${UBOOT_DTB_NAME}
+                                                             ${BOOT_STAGING}
+        ln -sf ${UBOOT_DTB_NAME_EXTRA}                       ${BOOT_STAGING}/${UBOOT_DTB_NAME}
     fi
 
     cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/u-boot-nodtb.bin-${MACHINE}-${UBOOT_CONFIG_EXTRA} \
