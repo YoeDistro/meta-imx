@@ -6,7 +6,7 @@ DESCRIPTION = "Sound Open Firmware with Zephyr"
 HOMEPAGE = "https://www.sofproject.org"
 SECTION = "kernel"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENCE;md5=3283cc1cbc485eef400f53a9df8645a1"
+LIC_FILES_CHKSUM = "file://LICENCE;md5=d2f9ebea8d61046122622ddf62a629eb"
 
 SRC_URI = "${FSL_MIRROR}/${BPN}-${PV}.tar.gz"
 SRC_URI[sha256sum] = "7ee8c496c7e8d95752212a65832982411085ce2b19ed4fb3be77c0dbef11fb33"
