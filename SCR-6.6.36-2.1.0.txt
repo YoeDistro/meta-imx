@@ -304,8 +304,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 Package:                     sof-zephyr-2.11.0
 Version:                     2.11.0
-Outgoing License:            BSD-3-Clause 
-License File:                LICENCE
+Outgoing License:            Apache-2.0 
+License File:                LICENSE
 Package Category:            BSP
 Type of Content:             binary
 Description and comments:    Sound Open Firmware with Zephyr
@@ -688,7 +688,7 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.10-aarch32-0b5dbcd.bin
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch32-d7741bd.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -707,7 +707,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.10-aarch64-0b5dbcd.bin
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch64-d7741bd.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -726,7 +726,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     mali-imx-r50.2-19b45a4.bin
+Package:                     mali-imx-r50.2-39604c3.bin
 Version:                     r50.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -848,7 +848,7 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.10-arm-0b5dbcd.bin
+Package:                     imx-gpu-g2d-6.4.11.p2.10-arm-d7741bd.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -860,7 +860,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.10-aarch64-0b5dbcd.bin
+Package:                     imx-gpu-g2d-6.4.11.p2.10-aarch64-d7741bd.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -1162,7 +1162,7 @@ Origin:                      VeriSilicon Inc. (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-vpu-hantro-daemon-1.3.0-56aebf2
+Package:                     imx-vpu-hantro-daemon-1.3.0-33b724c
 Version:                     1.3.0
 Outgoing License:            MIT License 
 License File:                LICENSE.txt
