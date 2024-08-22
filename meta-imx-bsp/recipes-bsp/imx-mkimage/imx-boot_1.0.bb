@@ -1,4 +1,4 @@
-# Copyright (C) 2017-2023 NXP
+# Copyright (C) 2017-2024 NXP
 
 require imx-mkimage_git.inc
 
@@ -7,7 +7,7 @@ LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0-only;md5=801f80980d171dd6425610833a22dbe6"
 SECTION = "BSP"
 
-inherit use-imx-security-controller-firmware uboot-sign
+inherit use-imx-security-controller-firmware uboot-config
 
 DEPENDS += " \
     u-boot \
@@ -55,6 +55,7 @@ TOOLS_NAME ?= "mkimage_imx8"
 IMX_BOOT_SOC_TARGET       ?= "INVALID"
 
 DEPLOY_OPTEE = "${@bb.utils.contains('MACHINE_FEATURES', 'optee', 'true', 'false', d)}"
+DEPLOY_OPTEE_STMM = "${@bb.utils.contains('MACHINE_FEATURES', 'optee stmm', 'true', 'false', d)}"
 
 IMXBOOT_TARGETS ?= \
     "${@bb.utils.contains('UBOOT_CONFIG', 'fspi', 'flash_flexspi', \
@@ -123,6 +124,7 @@ compile_mx8m() {
     cp ${DEPLOY_DIR_IMAGE}/${UBOOT_NAME_EXTRA}                     ${BOOT_STAGING}/u-boot.bin
 
 }
+
 compile_mx8() {
     bbnote 8QM boot binary build
     cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/${SC_FIRMWARE_NAME} ${BOOT_STAGING}/scfw_tcm.bin
@@ -366,6 +368,14 @@ do_deploy() {
     fi
     # copy makefile (soc.mak) for reference
     install -m 0644 ${BOOT_STAGING}/soc.mak                  ${DEPLOYDIR}/${BOOT_TOOLS}
+
+    # copy stmm files to deploy path
+    if ${DEPLOY_OPTEE_STMM}; then
+        install -m 0644 ${BOOT_STAGING}/tee.bin-stmm         ${DEPLOYDIR}/${BOOT_TOOLS}
+        install -m 0644 ${BOOT_STAGING}/capsule1.bin         ${DEPLOYDIR}/${BOOT_TOOLS}
+        install -m 0644 ${BOOT_STAGING}/CRT.*                ${DEPLOYDIR}/${BOOT_TOOLS}
+        install -m 0755 ${BOOT_STAGING}/mkeficapsule         ${DEPLOYDIR}/${BOOT_TOOLS}
+    fi
 
     for type in ${UBOOT_CONFIG}; do
         UBOOT_CONFIG_EXTRA="$type"

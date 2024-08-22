@@ -1,8 +1,6 @@
 # Copyright 2017-2022 NXP
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-DEPLOY_OPTEE_STMM = "${@bb.utils.contains('MACHINE_FEATURES', 'optee stmm', 'true', 'false', d)}"
-
 IMX_M4_DEMOS      = ""
 IMX_M4_DEMOS:mx8-nxp-bsp  = "imx-m4-demos:do_deploy"
 IMX_M4_DEMOS:mx8m-nxp-bsp = ""
@@ -58,14 +56,4 @@ do_deploy:append() {
         install -m 0644 ${DEPLOY_DIR_IMAGE}/mcore-demos/${M4_DEFAULT_IMAGE}         ${DEPLOYDIR}/${BOOT_TOOLS}
         ;;
     esac
-
-    if ${DEPLOY_OPTEE_STMM}; then
-        # Deploy STMM related files
-        install -m 0644 ${BOOT_STAGING}/tee.bin-stmm        ${DEPLOYDIR}/${BOOT_TOOLS}
-        install -m 0644 ${BOOT_STAGING}/capsule1.bin        ${DEPLOYDIR}/${BOOT_TOOLS}
-        install -m 0644 ${BOOT_STAGING}/CRT.*               ${DEPLOYDIR}/${BOOT_TOOLS}
-
-        install -m 0755 ${BOOT_STAGING}/mkeficapsule        ${DEPLOYDIR}/${BOOT_TOOLS}
-    fi
-
 }
