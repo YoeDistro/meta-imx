@@ -17,7 +17,7 @@ BSP Packages
 --------------------------------------------
 
 Package:                     linux-imx.git
-Version:                     6.6
+Version:                     6.10
 Outgoing License:            GPL-2.0 WITH Linux-syscall-note 
 License File:                COPYING
 Package Category:            BSP
