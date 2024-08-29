@@ -2,6 +2,8 @@ require recipes-graphics/imx-gpu-viv/imx-gpu-viv-6.inc
 
 ### Section 1: Changes to be upstreamed ###
 
+LIBVULKAN_API_VERSION   = "1.3.204"
+
 # FIXME: Update tensorflow-lite so it doesn't depend on this
 RPROVIDES:${PN}:append = " ${RPROVIDES_OPENCL}"
 RPROVIDES_OPENCL               = "opencl-icd-loader-dev"
