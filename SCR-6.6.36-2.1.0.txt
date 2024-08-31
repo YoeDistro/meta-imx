@@ -714,7 +714,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     mali-imx-r50.2-f71074c.bin
+Package:                     mali-imx-r50.2-f1dd03b.bin
 Version:                     r50.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -1097,7 +1097,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-opencl-converter-0.6.0-9e06d88.bin
+Package:                     imx-opencl-converter-0.6.0-c43f2d2.bin
 Version:                     0.6.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
