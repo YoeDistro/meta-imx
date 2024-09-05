@@ -82,6 +82,8 @@ PREFERRED_VERSION_wayland-protocols:mx7-nxp-bsp ??= "1.32.imx"
 PREFERRED_VERSION_wayland-protocols:mx8-nxp-bsp ??= "1.32.imx"
 PREFERRED_VERSION_wayland-protocols:mx9-nxp-bsp ??= "1.32.imx"
 
+PREFERRED_VERSION_xwayland:imx-nxp-bsp ??= ""
+
 PREFERRED_VERSION_spirv-headers:imxvulkan            ??= "1.3.275.0"
 PREFERRED_VERSION_spirv-tools:imxvulkan              ??= "1.3.275.0"
 PREFERRED_VERSION_vulkan-headers:imxvulkan           ??= "1.3.275.0"
