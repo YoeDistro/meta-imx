@@ -993,7 +993,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-parser-4.9.2-7e3c559.bin
+Package:                     imx-parser-4.9.2-c95dbc0.bin
 Version:                     4.9.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
