@@ -15,7 +15,6 @@ BOOT_VARIANT = "${@bb.utils.contains_any('IMXBOOT_VARIANT', '${IMXBOOT_VARIANTS}
 # Update i.MX 8MQ
 SOC_ATF_BOOT_UART_BASE:mx8mq-generic-bsp   = "0x30860000"
 
-
 # Update i.MX 8ULP
 IMX_EXTRA_FIRMWARE:mx8ulp-generic-bsp = "firmware-upower firmware-ele-imx"
 
@@ -78,17 +77,22 @@ PREFERRED_PROVIDER_virtual/libgl:imxgpu   ?= "mesa-gl"
 PREFERRED_PROVIDER_virtual/libgl:imxgpu3d  = "mesa-gl"
 PREFERRED_PROVIDER_virtual/mesa:imxgpu    ?= "mesa-gl"
 
+# GStreamer downgrade ffmpeg
+# Downgrade for 6 and 7, unlike meta-freescale
+PREFERRED_VERSION_ffmpeg:imx-nxp-bsp ??= "4.4.1"
+PREFERRED_VERSION_ffmpeg:mx8-nxp-bsp ??= "4.4.1"
+PREFERRED_VERSION_ffmpeg:mx9-nxp-bsp ??= "4.4.1"
+
+PREFERRED_VERSION_weston:imx-nxp-bsp ??= "12.0.4.imx"
 # i.MX 6 & 7 stay on weston 10.0 for fbdev
 PREFERRED_VERSION_weston:mx6-nxp-bsp ??= "10.0.5.imx"
 PREFERRED_VERSION_weston:mx7-nxp-bsp ??= "10.0.5.imx"
-PREFERRED_VERSION_weston:imx-nxp-bsp ??= "12.0.4.imx"
 
-PREFERRED_VERSION_wayland-protocols:mx6-nxp-bsp ??= "1.32.imx"
-PREFERRED_VERSION_wayland-protocols:mx7-nxp-bsp ??= "1.32.imx"
-PREFERRED_VERSION_wayland-protocols:mx8-nxp-bsp ??= "1.32.imx"
-PREFERRED_VERSION_wayland-protocols:mx9-nxp-bsp ??= "1.32.imx"
+PREFERRED_VERSION_wayland-protocols:imx-nxp-bsp ??= "1.32.imx"
 
 PREFERRED_VERSION_xwayland:imx-nxp-bsp ??= ""
+
+PREFERRED_VERSION_libdrm:imx-nxp-bsp ??= "2.4.116.imx"
 
 PREFERRED_VERSION_spirv-headers:imxvulkan            ??= "1.3.275.0"
 PREFERRED_VERSION_spirv-tools:imxvulkan              ??= "1.3.275.0"
@@ -96,13 +100,6 @@ PREFERRED_VERSION_vulkan-headers:imxvulkan           ??= "1.3.275.0"
 PREFERRED_VERSION_vulkan-loader:imxvulkan            ??= "1.3.275.0"
 PREFERRED_VERSION_vulkan-tools:imxvulkan             ??= "1.3.275.0"
 PREFERRED_VERSION_vulkan-validation-layers:imxvulkan ??= "1.3.275.0"
-
-PREFERRED_VERSION_ffmpeg ??= "4.4.1"
-
-PREFERRED_VERSION_libdrm:mx6-nxp-bsp ??= "2.4.116.imx"
-PREFERRED_VERSION_libdrm:mx7-nxp-bsp ??= "2.4.116.imx"
-PREFERRED_VERSION_libdrm:mx8-nxp-bsp ??= "2.4.116.imx"
-PREFERRED_VERSION_libdrm:mx9-nxp-bsp ??= "2.4.116.imx"
 
 PREFERRED_VERSION_optee-client:mx6-nxp-bsp ??= "4.2.0.imx"
 PREFERRED_VERSION_optee-client:mx7-nxp-bsp ??= "4.2.0.imx"
