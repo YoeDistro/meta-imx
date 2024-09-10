@@ -14,6 +14,7 @@ DEPENDS = " \
     json-c \
     optee-client \
     optee-os-tadevkit \
+    sqlite3 \
 "
 
 SRC_URI = "${SMW_LIB_SRC};branch=${SRCBRANCH_smw};name=smw;destsuffix=git/smw \
