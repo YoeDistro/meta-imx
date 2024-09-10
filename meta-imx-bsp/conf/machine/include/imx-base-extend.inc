@@ -77,6 +77,21 @@ PREFERRED_PROVIDER_virtual/libgl:imxgpu   ?= "mesa-gl"
 PREFERRED_PROVIDER_virtual/libgl:imxgpu3d  = "mesa-gl"
 PREFERRED_PROVIDER_virtual/mesa:imxgpu    ?= "mesa-gl"
 
+# GStreamer forked recipes
+# Use forks for 6 and 7, unlike meta-freescale
+PREFERRED_VERSION_gstreamer1.0:imx-nxp-bsp              ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad:imx-nxp-bsp  ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-base:imx-nxp-bsp ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-good:imx-nxp-bsp ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0:mx8-nxp-bsp              ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad:mx8-nxp-bsp  ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-base:mx8-nxp-bsp ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-good:mx8-nxp-bsp ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0:mx9-nxp-bsp              ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-bad:mx9-nxp-bsp  ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-base:mx9-nxp-bsp ??= "1.24.0.imx"
+PREFERRED_VERSION_gstreamer1.0-plugins-good:mx9-nxp-bsp ??= "1.24.0.imx"
+
 # GStreamer downgrade ffmpeg
 # Downgrade for 6 and 7, unlike meta-freescale
 PREFERRED_VERSION_ffmpeg:imx-nxp-bsp ??= "4.4.1"
@@ -120,6 +135,12 @@ PREFERRED_VERSION_optee-os-tadevkit:mx9-nxp-bsp   ??= "4.2.0.imx"
 
 PREFERRED_VERSION_opencv:mx8-nxp-bsp ??= "4.10.0.imx"
 PREFERRED_VERSION_opencv:mx9-nxp-bsp ??= "4.10.0.imx"
+
+PREFERRED_VERSION_xen-tools = "4.18.imx+stable"
+PREFERRED_VERSION_xen       = "4.18.imx+stable"
+
+QEMUVERSION              = "8.2.3"
+QEMUVERSION:mx95-nxp-bsp = "8.2.2.imx"
 
 SOC_DEFAULT_IMAGE_FSTYPES = "wic.bmap wic.zst tar.zst"
 ZSTD_COMPRESSION_LEVEL ?= "-10"
