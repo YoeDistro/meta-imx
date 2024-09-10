@@ -7,6 +7,11 @@ IMX_DEFAULT_BSP = "nxp"
 IMX_DEFAULT_BOOTLOADER:imx-nxp-bsp = "u-boot-imx"
 IMX_DEFAULT_KERNEL:imx-nxp-bsp     = "linux-imx"
 
+# FIXME: Remove the hard-coded assignment to u-boot-fslc that exists
+# in imx6sllevk.conf so the following workaround can also be removed
+PREFERRED_PROVIDER_u-boot:imx6sllevk             = "${IMX_DEFAULT_BOOTLOADER}"
+PREFERRED_PROVIDER_virtual/bootloader:imx6sllevk = "${IMX_DEFAULT_BOOTLOADER}"
+
 # IMXBOOT_VARIANT infrastructure
 IMXBOOT_VARIANT  ?= ""
 IMXBOOT_VARIANTS ?= "NONE"
