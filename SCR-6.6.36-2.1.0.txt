@@ -1135,7 +1135,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-vpu-hantro-1.34.0-a0eda50.bin
+Package:                     imx-vpu-hantro-1.34.0-N/A.bin
 Version:                     1.34.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
