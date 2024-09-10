@@ -33,7 +33,6 @@ QEMUVERSION              = "8.2.3"
 QEMUVERSION:mx95-nxp-bsp = "8.2.2.imx"
 
 BBMASK += "meta-freescale/recipes-multimedia/gstreamer"
-BBMASK += "meta-arm/meta-arm/recipes-kernel/linux/linux-yocto_5.15%.bbappend"
 
 # Use systemd as default init manager
 POKY_INIT_MANAGER = "systemd"
