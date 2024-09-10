@@ -34,6 +34,13 @@ DEFAULTTUNE:mx9-nxp-bsp    ?= "armv8a-crc-crypto"
 DEFAULTTUNE:mx91-nxp-bsp  ?= "armv8a-crc-crypto"
 DEFAULTTUNE:mx93-nxp-bsp   ?= "armv8a-crc-crypto"
 
+# Use systemd as default init manager
+POKY_INIT_MANAGER = "systemd"
+
+# Use virtual-runc as a default container runtime
+# runtime: runc, crun, runv, runx
+VIRTUAL-RUNTIME_container_runtime = "virtual-runc"
+
 PACKAGECONFIG:append:pn-gstreamer1.0-plugins-ugly = " x264"
 
 PACKAGECONFIG:append:pn-perf = " jevents"
