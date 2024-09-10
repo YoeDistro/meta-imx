@@ -1,6 +1,12 @@
 # This file is included from meta-freescale/conf/machine/include/imx-base.inc
 # and provides a simple mechanism to override settings in the file
 
+IMX_DEFAULT_BSP = "nxp"
+
+# The default bootloader and kernel set in meta-freescale is for fslc
+IMX_DEFAULT_BOOTLOADER:imx-nxp-bsp = "u-boot-imx"
+IMX_DEFAULT_KERNEL:imx-nxp-bsp     = "linux-imx"
+
 # IMXBOOT_VARIANT infrastructure
 IMXBOOT_VARIANT  ?= ""
 IMXBOOT_VARIANTS ?= "NONE"
