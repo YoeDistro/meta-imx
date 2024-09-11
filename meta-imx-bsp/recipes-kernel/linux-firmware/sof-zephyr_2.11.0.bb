@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fa818a259cbed7ce8bc2a22d35a464fc \
                     file://LICENCE-sof;md5=14abb55d71048ebecff1a104640546b6 \
 "
 SRC_URI = "${FSL_MIRROR}/${BPN}-${PV}.tar.gz"
-SRC_URI[sha256sum] = "9b9a77a0e092e0a3a890d12dc2a26f4a65c635b05167362c47561c9078b4f600"
+SRC_URI[sha256sum] = "619ee34ff1bdbd9a7949d05f7e3ae3d6eb588766589a0999d66d47ea206840d0"
 
 inherit allarch
 
