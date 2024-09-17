@@ -1,4 +1,4 @@
-BOOT_CONFIG_MACHINE:imx8qm-cockpit = "${BOOT_NAME}-imx8qmmek-${UBOOT_CONFIG}.bin"
+BOOT_CONFIG_MACHINE:imx8qm-cockpit = "imx-boot-imx8qmmek-${UBOOT_CONFIG}.bin"
 MACHINE_COCKPIT = "imx8qm-cockpit-mek"
 
 do_compile:imx8qm-cockpit () {
@@ -67,14 +67,14 @@ do_deploy:imx8qm-cockpit() {
         install -m 0644 ${BOOT_STAGING}/u-boot-spl-a72.bin   ${DEPLOYDIR}/${BOOT_TOOLS}
         install -m 0644 ${BOOT_STAGING}/imx-boot-imx8qmmek-sd.bin-flash_cockpit_spl ${DEPLOYDIR}
         cd ${DEPLOYDIR}
-        ln -sf imx-boot-imx8qmmek-sd.bin-flash_cockpit_spl ${BOOT_NAME}
+        ln -sf imx-boot-imx8qmmek-sd.bin-flash_cockpit_spl imx-boot
         cd -
     else
         install -m 0644 ${BOOT_STAGING}/u-boot.bin           ${DEPLOYDIR}/${BOOT_TOOLS}
         install -m 0644 ${BOOT_STAGING}/u-boot-a72.bin       ${DEPLOYDIR}/${BOOT_TOOLS}
         install -m 0644 ${BOOT_STAGING}/imx-boot-imx8qmmek-sd.bin-flash_cockpit ${DEPLOYDIR}
         cd ${DEPLOYDIR}
-        ln -sf imx-boot-imx8qmmek-sd.bin-flash_cockpit ${BOOT_NAME}
+        ln -sf imx-boot-imx8qmmek-sd.bin-flash_cockpit imx-boot
         cd -
     fi
 }
