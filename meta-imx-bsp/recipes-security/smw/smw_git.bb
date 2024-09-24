@@ -71,4 +71,6 @@ FILES:${PN}-tests = "${bindir}/* ${datadir}/${BPN}/*"
 
 RDEPENDS:${PN}-tests += "bash cmake"
 
+PACKAGE_ARCH = "${MACHINE_SOCARCH}"
+
 COMPATIBLE_MACHINE = "(imx-nxp-bsp)"
