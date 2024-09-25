@@ -2,8 +2,8 @@
 # maintenance, the top section is a verbatim copy of an OE-core
 # recipe. The second section customizes the recipe for i.MX.
 
-########### OE-core copy ##################
-# Upstream hash: TBD
+########### meta-openembedded copy ##################
+# Upstream hash: 742c3da8747b291e9624fc83948d5dc3ba04a33e
 
 SUMMARY = "Linux libcamera framework"
 SECTION = "libs"
@@ -17,9 +17,13 @@ LIC_FILES_CHKSUM = "\
 
 SRC_URI = " \
         git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
+        file://0001-media_device-Add-bool-return-type-to-unlock.patch \
+        file://0002-options-Replace-use-of-VLAs-in-C.patch \
+        file://0001-rpi-Use-alloca-instead-of-variable-length-arrays.patch \
+        file://0001-ipu3-Use-posix-basename.patch \
 "
 
-SRCREV = "9882e1276c57c599a320306af9acf9a2a5c5da06"
+SRCREV = "89227a428a82e724548399d35c98ea89566f9045"
 
 PE = "1"
 
@@ -79,11 +83,15 @@ FILES:${PN}-gst = "${libdir}/gstreamer-1.0"
 # libcamera-v4l2 explicitly sets _FILE_OFFSET_BITS=32 to get access to
 # both 32 and 64 bit file APIs.
 GLIBC_64BIT_TIME_FLAGS = ""
-########### End of OE-core copy ###########
+########### End of meta-openembedded copy ###########
 
 ########### i.MX overrides ################
 SRC_URI:remove = " \
         git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
+        file://0001-media_device-Add-bool-return-type-to-unlock.patch \
+        file://0002-options-Replace-use-of-VLAs-in-C.patch \
+        file://0001-rpi-Use-alloca-instead-of-variable-length-arrays.patch \
+        file://0001-ipu3-Use-posix-basename.patch \
 "
 SRC_URI:prepend = "${LIBCAMERA_SRC};branch=${SRCBRANCH} "
 LIBCAMERA_SRC ?= "gitsm://github.com/nxp-imx/libcamera.git;protocol=https"
