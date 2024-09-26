@@ -3,7 +3,7 @@
 # recipe. The second section customizes the recipe for i.MX.
 
 ########### meta-openembedded copy ##################
-# Upstream hash: 742c3da8747b291e9624fc83948d5dc3ba04a33e
+# Upstream hash: 4642c541c4f4f368941ce3956ad47c787bfb2a35
 
 SUMMARY = "Linux libcamera framework"
 SECTION = "libs"
@@ -19,11 +19,10 @@ SRC_URI = " \
         git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
         file://0001-media_device-Add-bool-return-type-to-unlock.patch \
         file://0002-options-Replace-use-of-VLAs-in-C.patch \
-        file://0001-rpi-Use-alloca-instead-of-variable-length-arrays.patch \
-        file://0001-ipu3-Use-posix-basename.patch \
+        file://0001-rpi-Use-malloc-instead-of-variable-length-arrays.patch \
 "
 
-SRCREV = "89227a428a82e724548399d35c98ea89566f9045"
+SRCREV = "aee16c06913422a0ac84ee3217f87a9795e3c2d9"
 
 PE = "1"
 
@@ -32,10 +31,11 @@ S = "${WORKDIR}/git"
 DEPENDS = "python3-pyyaml-native python3-jinja2-native python3-ply-native python3-jinja2-native udev gnutls chrpath-native libevent libyaml"
 DEPENDS += "${@bb.utils.contains('DISTRO_FEATURES', 'qt', 'qtbase qtbase-native', '', d)}"
 
-PACKAGES =+ "${PN}-gst"
+PACKAGES =+ "${PN}-gst ${PN}-pycamera"
 
 PACKAGECONFIG ??= ""
 PACKAGECONFIG[gst] = "-Dgstreamer=enabled,-Dgstreamer=disabled,gstreamer1.0 gstreamer1.0-plugins-base"
+PACKAGECONFIG[pycamera] = "-Dpycamera=enabled,-Dpycamera=disabled,python3 python3-pybind11"
 
 LIBCAMERA_PIPELINES ??= "auto"
 
@@ -79,6 +79,7 @@ do_package_recalculate_ipa_signatures() {
 
 FILES:${PN} += " ${libexecdir}/libcamera/v4l2-compat.so"
 FILES:${PN}-gst = "${libdir}/gstreamer-1.0"
+FILES:${PN}-pycamera = "${PYTHON_SITEPACKAGES_DIR}/libcamera"
 
 # libcamera-v4l2 explicitly sets _FILE_OFFSET_BITS=32 to get access to
 # both 32 and 64 bit file APIs.
@@ -90,13 +91,13 @@ SRC_URI:remove = " \
         git://git.libcamera.org/libcamera/libcamera.git;protocol=https;branch=master \
         file://0001-media_device-Add-bool-return-type-to-unlock.patch \
         file://0002-options-Replace-use-of-VLAs-in-C.patch \
-        file://0001-rpi-Use-alloca-instead-of-variable-length-arrays.patch \
-        file://0001-ipu3-Use-posix-basename.patch \
+        file://0001-rpi-Use-malloc-instead-of-variable-length-arrays.patch \
 "
 SRC_URI:prepend = "${LIBCAMERA_SRC};branch=${SRCBRANCH} "
 LIBCAMERA_SRC ?= "gitsm://github.com/nxp-imx/libcamera.git;protocol=https"
 SRCBRANCH = "imx/next"
 SRCREV = "9882e1276c57c599a320306af9acf9a2a5c5da06"
+
 PACKAGECONFIG = "gst"
 
 COMPATIBLE_MACHINE = "(mx95-nxp-bsp)"
