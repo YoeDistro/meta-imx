@@ -100,5 +100,9 @@ SRCREV = "9882e1276c57c599a320306af9acf9a2a5c5da06"
 
 PACKAGECONFIG = "gst"
 
+do_configure:remove() {
+    sed -i -e 's|py_compile=True,||' ${S}/utils/ipc/mojo/public/tools/mojom/mojom/generate/template_expander.py
+}
+
 COMPATIBLE_MACHINE = "(mx95-nxp-bsp)"
 ########### End of i.MX overrides #########
