@@ -47,8 +47,10 @@ PACKAGECONFIG:append:pn-perf = " jevents"
 
 PACKAGECONFIG:append:pn-pulseaudio = " autospawn-for-root"
 
-PACKAGECONFIG:append:class-target:pn-qtquick3d     = " examples"
-PACKAGECONFIG:append:class-target:pn-qtwebengine   = " examples"
+PACKAGECONFIG:append:class-target:pn-qtquick3d = " examples"
+PACKAGECONFIG:remove:class-target:pn-qtquick3d = "openxr"
+
+PACKAGECONFIG:append:class-target:pn-qtwebengine = " examples"
 
 PACKAGECONFIG:append:pn-systemd = " unmanaged-network"
 
