@@ -72,4 +72,5 @@ RDEPENDS:${PN} += " \
 
 RDEPENDS_DPDK ?= "dpdk ${RDEPENDS_DPDK_FPR}"
 RDEPENDS_DPDK_FPR = ""
+RDEPENDS_DPDK_FPR:mx93-nxp-bsp = "dpdk-fpr"
 RDEPENDS_DPDK_FPR:mx95-nxp-bsp = "dpdk-fpr"
