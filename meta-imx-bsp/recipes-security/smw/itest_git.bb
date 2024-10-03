@@ -22,4 +22,6 @@ EXTRA_OECMAKE = " \
     -DLIB_PATH="${STAGING_DIR_HOST}${libdir}""
 EXTRA_OECMAKE:append:mx95-nxp-bsp = " -DV2X=1"
 
+PACKAGE_ARCH = "${MACHINE_SOCARCH}"
+
 COMPATIBLE_MACHINE = "(mx8ulp-nxp-bsp|mx91-nxp-bsp|mx93-nxp-bsp|mx95-nxp-bsp)"
