@@ -1,15 +1,14 @@
-# Copyright 2017-2022 NXP
+# Copyright 2017-2022,2024 NXP
 
 DESCRIPTION = "i.MX DSP Wrapper, Firmware Binary, Codec Libraries"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=ca53281cc0caa7e320d4945a896fb837"
 
+IMX_SRCREV_ABBREV = "a3074e2"
 
-inherit fsl-eula-unpack autotools pkgconfig
+inherit fsl-eula-recent autotools pkgconfig fsl-eula2-unpack2
 
-SRC_URI = "${FSL_MIRROR}/${BP}.bin;fsl-eula=true"
-
-SRC_URI[sha256sum] = "317e3c682351b84bcab506b5dcda06feb5f957a1ddf53521ec8f6c68ce7a46b8"
+SRC_URI[sha256sum] = "1f763c21f20abfbb013a0d1acb5846fec55241e9fa8c8aae47fd95b007d800fe"
 
 EXTRA_OECONF = " \
     -datadir=${base_libdir}/firmware \
@@ -27,11 +26,12 @@ HIFI4_PLATFORM:mx8ulp-nxp-bsp = "imx8ulp"
 UNSUPPORTED_TESTS                = "dsp_tflm"
 UNSUPPORTED_TESTS:mx8ulp-nxp-bsp = ""
 
-do_install:append () {
+do_install () {
+    autotools_do_install
     # Remove firmware not for this platform
-    find ${D}/${base_libdir}/firmware/imx/dsp -name hifi4_*.bin -not -name *${HIFI4_PLATFORM}* -exec rm {} \;
+    find ${D}${base_libdir}/firmware/imx/dsp -name hifi4_*.bin -not -name *${HIFI4_PLATFORM}* -exec rm {} \;
     # Set the expected generic name for the firmware
-    mv ${D}/${base_libdir}/firmware/imx/dsp/hifi4_${HIFI4_PLATFORM}.bin ${D}/${base_libdir}/firmware/imx/dsp/hifi4.bin
+    mv ${D}${base_libdir}/firmware/imx/dsp/hifi4_${HIFI4_PLATFORM}.bin ${D}${base_libdir}/firmware/imx/dsp/hifi4.bin
     # Remove unit tests not for this platform
     for unsupported_test in ${UNSUPPORTED_TESTS}; do
         find ${D}/unit_tests/DSP -name $unsupported_test* -exec rm {} \;
