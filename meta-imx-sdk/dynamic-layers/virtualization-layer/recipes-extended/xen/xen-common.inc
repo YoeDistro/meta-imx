@@ -1,6 +1,6 @@
 SRCBRANCH = "imx_4.18.y"
 XEN_SRC ?= "git://github.com/nxp-imx/imx-xen.git;protocol=https"
 SRC_URI = " ${XEN_SRC};branch=${SRCBRANCH}"
-SRCREV = "58555e62c938941da6acdde0f7bbb8bba7b09814"
+SRCREV = "1425b673a079a2fe6e1bb1fb1cb2fee5a8b40993"
 XEN_REL = "4.18.imx"
 PV = "${XEN_REL}+stable"
