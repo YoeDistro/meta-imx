@@ -98,7 +98,9 @@ LIBCAMERA_SRC ?= "gitsm://github.com/nxp-imx/libcamera.git;protocol=https"
 SRCBRANCH = "imx/next"
 SRCREV = "0462080eb436d29ab43f0dd1a3cc74f6129fc110"
 
-PACKAGECONFIG = "gst pycamera"
+PACKAGECONFIG = "gst pycamera tiff"
+
+PACKAGECONFIG[tiff] = ",,tiff"
 
 do_configure:remove() {
     sed -i -e 's|py_compile=True,||' ${S}/utils/ipc/mojo/public/tools/mojom/mojom/generate/template_expander.py
