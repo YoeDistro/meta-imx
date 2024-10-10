@@ -333,7 +333,7 @@ SRC_URI:remove:class-native = " \
 	file://0011-linux-user-workaround-for-missing-MAP_FIXED_NOREPLAC.patch \
 	file://0012-linux-user-workaround-for-missing-MAP_SHARED_VALIDAT.patch \
         "
-SRCREV_imx-qemu = "5d1c01c66a194e3d1dc30e6735c28751970d7857"
+SRCREV_imx-qemu = "e94f7f286ea3261d97a54966469a1fa36dd4c86a"
 SRCREV_berkeley-softfloat-3 = "b64af41c3276f97f0e181920400ee056b9c88037"
 SRCREV_berkeley-testfloat-3 = "e7af9751d9f9fd3b47911f51a5cfd08af256a9ab"
 SRCREV_keycodemapdb = "f5772a62ec52591ff6870b7e8ef32482371f22c6"
