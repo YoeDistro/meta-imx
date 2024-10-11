@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=ca53281cc0caa7e320d4945a896fb837"
 DEPENDS = "virtual/opencl-icd"
 
 SRC_URI = "${FSL_MIRROR}/${BP}-${IMX_SRCREV_ABBREV}.bin;fsl-eula=true"
-IMX_SRCREV_ABBREV = "175030d"
+IMX_SRCREV_ABBREV = "605ef75"
 
-SRC_URI[sha256sum] = "4540462c52fbc9487d42dc32ca93214071b97a37a6b3e7c268f53f2b87e6c8fd"
+SRC_URI[sha256sum] = "777f49805d5455ebc27e63d19552e2924174011d2ae7d9b392febfa8794d4dc6"
 
 S = "${WORKDIR}/${BP}-${IMX_SRCREV_ABBREV}"
 inherit fsl-eula-unpack autotools pkgconfig meson
