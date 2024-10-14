@@ -597,6 +597,16 @@ Origin:                      NXP (BSD-3-Clause)
 
 --------------------------------------------
 
+Package:                     mtcp-dpdk.git
+Version:                     22.11
+Outgoing License:            BSD-3-Clause 
+License File:                license/bsd-3-clause.txt
+Package Category:            BSP
+Type of Content:             source
+Description and comments:    mTCP on DPDK
+Release Location:            https://github.com/nxp-mcuxpresso/mtcp -b lf-6.6.52-2.2.0
+--------------------------------------------
+
 Package:                     dpdk-extras.git
 Version:                     git
 Outgoing License:            GPL-2.0 
@@ -860,8 +870,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-dpu-g2d-v1-2.2.0-7943590.bin
-Version:                     2.2.0
+Package:                     imx-dpu-g2d-v1-2.2.2-e2dce80.bin
+Version:                     2.2.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -872,8 +882,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-dpu-g2d-v2-2.2.0-7943590.bin
-Version:                     2.2.0
+Package:                     imx-dpu-g2d-v2-2.2.2-e2dce80.bin
+Version:                     2.2.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Graphics
@@ -993,7 +1003,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-parser-4.9.2-9e0eca7.bin
+Package:                     imx-parser-4.9.2-828fcb7.bin
 Version:                     4.9.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -1206,7 +1216,7 @@ Origin:                      NXP (GPL-2.0)
 
 --------------------------------------------
 
-Package:                     imx-dsp-2.1.9.bin
+Package:                     imx-dsp-2.1.9-a3074e2.bin
 Version:                     2.1.9
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
