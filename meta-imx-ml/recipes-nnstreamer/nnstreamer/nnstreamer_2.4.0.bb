@@ -18,8 +18,8 @@ DEPENDS = "\
 	libpng \
 "
 
-SRCREV = "f82789170b8f2696e50cbc5027b74b767f5e9415"
-SRC_URI = "git://github.com/nnstreamer/nnstreamer.git;branch=main;protocol=https \
+SRCREV = "807060954acfdb6cec130559d00eef1af61457cf"
+SRC_URI = "git://github.com/nnstreamer/nnstreamer.git;branch=lts/2.4.0.b;protocol=https \
            file://0001-PATCH-increase-to-cpp17-version.patch \
            file://0001-AIR-11938-tensor-filter-use-memcpy-ethosu-delegate.patch \
            "
