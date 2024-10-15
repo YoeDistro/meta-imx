@@ -99,8 +99,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     firmware-imx-8.25-27879f8.bin
-Version:                     8.25
+Package:                     firmware-imx-8.26-c91b0b6.bin
+Version:                     8.26
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            BSP
@@ -686,7 +686,7 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.10-aarch32-875c109.bin
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch32-56f09c4.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -705,7 +705,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-viv-6.4.11.p2.10-aarch64-875c109.bin
+Package:                     imx-gpu-viv-6.4.11.p2.10-aarch64-56f09c4.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -846,7 +846,7 @@ Origin:                      NXP (MIT)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.10-arm-875c109.bin
+Package:                     imx-gpu-g2d-6.4.11.p2.10-arm-56f09c4.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -858,7 +858,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-gpu-g2d-6.4.11.p2.10-aarch64-875c109.bin
+Package:                     imx-gpu-g2d-6.4.11.p2.10-aarch64-56f09c4.bin
 Version:                     6.4.11.p2.10
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
