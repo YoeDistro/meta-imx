@@ -1,6 +1,6 @@
 
 SRCBRANCH = "lf-6.6.52_2.2.0"
-SRCREV = "52d975aabfc493beda0aaef9dac6dce757c90b62"
+SRCREV = "52d975aabfc493beda0aaef9dac6dce757c90b62" 
 
 PV = "2023.03+git${SRCPV}"
 
