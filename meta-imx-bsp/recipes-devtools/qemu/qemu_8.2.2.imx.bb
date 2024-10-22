@@ -31,4 +31,4 @@ COMPATIBLE_HOST:powerpc = "null"
 PACKAGECONFIG:append = " pipewire aio vhost libusb \
                          ${@bb.utils.contains('DISTRO_FEATURES', 'xen', 'libvhost_user', '', d)} \
 "
-# COMPATIBLE_MACHINE = "(mx95-nxp-bsp)"
+COMPATIBLE_MACHINE = "(mx95-nxp-bsp)"
