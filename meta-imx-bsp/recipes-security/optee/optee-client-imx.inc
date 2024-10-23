@@ -21,6 +21,10 @@ do_install:append () {
         install -m 755 ${WORKDIR}/tee-udev.rules ${D}${nonarch_base_libdir}/udev/rules.d/
         sed -i -e "s/teeclnt/${TEE_GROUP_NAME}/" ${D}${nonarch_base_libdir}/udev/rules.d/tee-udev.rules
     fi
+
+    if [ "${libdir}" != "${nonarch_base_libdir}" ]; then
+        rm -rf ${D}${libdir}/systemd
+    fi
 }
 inherit ${@oe.utils.conditional('VIRTUAL-RUNTIME_dev_manager', 'busybox-mdev', '', 'useradd', d)}
 USERADD_PACKAGES = "${PN}"
