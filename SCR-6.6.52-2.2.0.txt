@@ -15,8 +15,6 @@ Release Location: https://www.nxp.com/design/software/embedded-software/i-mx-sof
 --------------------------------------------
 BSP Packages
 --------------------------------------------
-BSP Packages
---------------------------------------------
 
 Package:                     linux-imx.git
 Version:                     6.6
@@ -101,7 +99,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     firmware-imx-8.26-cd5051a.bin
+Package:                     firmware-imx-8.26-c91b0b6.bin
 Version:                     8.26
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -635,28 +633,6 @@ Origin:                      NXP (BSD-3-Clause)
                              Packet Journey - Gandi S.A.S (BSD-2-Clause) - https://github.com/Gandi/packet-journey
 
 --------------------------------------------
-
-Package:                     obx-imx-ipc.git
-Version:                     git
-Outgoing License:            GPL-2.0 
-License File:                 LICENSE.txt
-Package Category:            BSP
-Type of Content:             source
-Description and comments:    SPI based IPC tool
-Release Location:            y
---------------------------------------------
-
-Package:                     obx-statstool.git
-Version:                     git
-Outgoing License:            BSD-3-Clause 
-License File:                 LICENSE.txt
-Package Category:            BSP
-Type of Content:             source
-Description and comments:    Stats tool for OrangeBox
-Release Location:            y
---------------------------------------------
-Graphics Packages
---------------------------------------------
 Graphics Packages
 --------------------------------------------
 
@@ -748,7 +724,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     mali-imx-r50.2-710cfb6.bin
+Package:                     mali-imx-r50.2-891148b.bin
 Version:                     r50.2
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -1006,8 +982,6 @@ Origin:                      NXP (BSD-3-Cluse)
                                 Advanced Micro Devices, Inc.  (BSD-3-Clause)
                                 Itseez Inc.  (BSD-3-Clause)
 
---------------------------------------------
-Multimedia Packages
 --------------------------------------------
 Multimedia Packages
 --------------------------------------------
@@ -1311,8 +1285,6 @@ Origin:                      NXP (Proprietary)
 --------------------------------------------
 M4 Processor Packages
 --------------------------------------------
-M4 Processor Packages
---------------------------------------------
 
 Package:                     imx7ulp-m4-demo-2.16.000.bin
 Version:                     2.16.000
@@ -1399,8 +1371,6 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 --------------------------------------------
 M7 Processor Packages
 --------------------------------------------
-M7 Processor Packages
---------------------------------------------
 
 Package:                     imx8mn-m7-demo-2.16.000.bin
 Version:                     2.16.000
@@ -1463,8 +1433,6 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 --------------------------------------------
 M33 Processor Packages
 --------------------------------------------
-M33 Processor Packages
---------------------------------------------
 
 Package:                     imx8ulp-m33-demo-2.16.000.bin
 Version:                     2.16.000
@@ -1497,8 +1465,6 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
                              Mentor Graphics, Ltd. (BSD-3-Clause) - https://github.com/OpenAMP/open-amp/
                              KEYnetik, Inc (Proprietary)
 
---------------------------------------------
-MachineLearning Packages
 --------------------------------------------
 MachineLearning Packages
 --------------------------------------------
@@ -1676,12 +1642,6 @@ Origin:                      Vivante Corporation (MIT)
                              The Khronos Group Inc. (Apache-2.0) - https://www.khronos.org/
                              The Android Open Source Project (Apache 2.0) - https://developer.android.com/index.html
 
---------------------------------------------
-Misc Packages
---------------------------------------------
-Misc Packages
---------------------------------------------
-Tools Packages
 --------------------------------------------
 Tools Packages
 --------------------------------------------
