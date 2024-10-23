@@ -2,7 +2,7 @@ require conf/machine/include/imx-base.inc
 require conf/machine/include/arm/armv8-2a/tune-cortexa55.inc
 
 MACHINE_FEATURES += "pci wifi bluetooth optee"
-MACHINE_FEATURES:append:use-nxp-bsp = " nxpwifi-all-pcie nxpwifi-all-sdio jailhouse dpdk xen"
+MACHINE_FEATURES:append:use-nxp-bsp = " nxpwifi-all-pcie nxpwifi-all-sdio jailhouse dpdk xen sof"
 
 KERNEL_DEVICETREE = " \
     freescale/${KERNEL_DEVICETREE_BASENAME}.dtb \
@@ -28,19 +28,21 @@ OEI_SOC    = "mx95"
 OEI_BOARD  ?= "mx95lp5"
 DDR_TYPE   ?= "lpddr5"
 
-IMXBOOT_VARIANTS = "alt jailhouse netc"
+IMXBOOT_VARIANTS = "alt jailhouse netc sof"
 
 # Multiple system manager configs by IMXBOOT_VARIANT
 SYSTEM_MANAGER_CONFIG = "${@bb.utils.contains('IMXBOOT_VARIANT', 'alt',       'mx95alt', \
                             bb.utils.contains('IMXBOOT_VARIANT', 'jailhouse', 'mx95evkjailhouse', \
                             bb.utils.contains('IMXBOOT_VARIANT', 'netc',      'mx95netc', \
-                                                                              'mx95evk', d), d), d)}"
+			    bb.utils.contains('IMXBOOT_VARIANT', 'sof',       'mx95evksof', \
+                                                                              'mx95evk', d), d), d), d)}"
 
 # imx-boot (flash.bin) targets based on UBOOT_CONFIG and IMXBOOT_VARIANT
 IMXBOOT_TARGETS_SD = "${@bb.utils.contains('IMXBOOT_VARIANT', 'alt',       '${IMXBOOT_TARGETS_BASENAME}_alt', \
+		         bb.utils.contains('IMXBOOT_VARIANT', 'sof',        '${IMXBOOT_TARGETS_BASENAME}_a55', \
                          bb.utils.contains('IMXBOOT_VARIANT', 'jailhouse', '${IMXBOOT_TARGETS_BASENAME}_jailhouse', \
                          bb.utils.contains('IMXBOOT_VARIANT', 'netc',      '${IMXBOOT_TARGETS_BASENAME}_netc', \
-                                                                           '${IMXBOOT_TARGETS_BASENAME}_all ${IMXBOOT_TARGETS_BASENAME}_a55', d), d), d)} \
+                                                                           '${IMXBOOT_TARGETS_BASENAME}_all ${IMXBOOT_TARGETS_BASENAME}_a55', d), d), d), d)} \
 "
 
 IMXBOOT_TARGETS = " \
