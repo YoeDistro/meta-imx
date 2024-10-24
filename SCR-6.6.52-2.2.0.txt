@@ -99,7 +99,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     firmware-imx-8.26-cd5051a.bin
+Package:                     firmware-imx-8.26-d4c33ab.bin
 Version:                     8.26
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -131,7 +131,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     firmware-ele-imx-1.3.0-bb26a75.bin
+Package:                     firmware-ele-imx-1.3.0-523325c.bin
 Version:                     1.3.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
@@ -632,6 +632,26 @@ Origin:                      NXP (BSD-3-Clause)
                              DPDK - Intel Corporation (BSD-3-Clause) - https://github.com/DPDK/dpdk
                              Packet Journey - Gandi S.A.S (BSD-2-Clause) - https://github.com/Gandi/packet-journey
 
+--------------------------------------------
+
+Package:                     obx-imx-ipc.git
+Version:                     6.6
+Outgoing License:            GPL-2.0 
+License File:                LICENSE.txt
+Package Category:            BSP
+Type of Content:             source
+Description and comments:    SPI IPC utility (using spide driver)
+Release Location:            https://github.com/nxp-imx/obx_imx_ipc -b v1.0
+--------------------------------------------
+
+Package:                     obx-statstool.git
+Version:                     6.6
+Outgoing License:            BSD-3-Clause 
+License File:                LICENSE.txt
+Package Category:            BSP
+Type of Content:             source
+Description and comments:    Stats tool for OrangeBox
+Release Location:            https://github.com/nxp-imx/obx_statstool -b v1.0
 --------------------------------------------
 Graphics Packages
 --------------------------------------------
@@ -1145,8 +1165,8 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-vpu-hantro-1.34.0-N/A.bin
-Version:                     1.34.0
+Package:                     imx-vpu-hantro-1.35.0-98ff183.bin
+Version:                     1.35.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                COPYING
 Package Category:            Multimedia
@@ -1160,7 +1180,7 @@ Origin:                      VeriSilicon Inc. (LA_OPT_NXP_Software_License)
 
 --------------------------------------------
 
-Package:                     imx-vpu-hantro-daemon-1.4.0-f885994
+Package:                     imx-vpu-hantro-daemon-1.4.0-75d9dd9
 Version:                     1.4.0
 Outgoing License:            MIT License 
 License File:                LICENSE.txt
