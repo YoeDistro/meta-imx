@@ -23,9 +23,6 @@ EXTRA_OEMAKE = " \
 "
 
 do_configure() {
-    if ${@bb.utils.contains('SYSTEM_MANAGER_CONFIG', 'mx95evksof', 'true', 'false', d)}; then
-        mv configs/other/${SYSTEM_MANAGER_CONFIG}.cfg configs/
-    fi
     oe_runmake config=${SYSTEM_MANAGER_CONFIG} clean
     oe_runmake config=${SYSTEM_MANAGER_CONFIG} cfg
 }
