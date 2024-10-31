@@ -254,7 +254,7 @@ Origin:                      NXP (GPL-2.0)
 
 Package:                     imx-firmware.git
 Version:                     
-Outgoing License:            LA_OPT_NXP_Software_License v56 April 2024 Additional distribution license granted - Section 2.3 applies
+Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                LICENSE.txt
 Package Category:            BSP
 Type of Content:             binary
@@ -404,7 +404,7 @@ Origin:                      NXP (BSD-2-Clause) (We are not using /host)
 Package:                     imx-xen.git
 Version:                     4.18.imx
 Outgoing License:            GPL-2.0 
-License File:                COPYING
+License File:                LICENSE.txt
 Package Category:            BSP
 Type of Content:             source
 Description and comments:    A Virtual Machine Monitor
@@ -600,7 +600,7 @@ Origin:                      NXP (BSD-3-Clause)
 Package:                     mtcp-dpdk.git
 Version:                     22.11
 Outgoing License:            BSD-3-Clause 
-License File:                license/bsd-3-clause.txt
+License File:                LICENSE
 Package Category:            BSP
 Type of Content:             source
 Description and comments:    mTCP on DPDK
@@ -626,7 +626,7 @@ Origin:                      NXP (GPL-2.0 or BSD-3-Clause)
 Package:                     dpdk-fpr.git
 Version:                     22.11
 Outgoing License:            BSD-3-Clause 
-License File:                license/bsd-3-clause.txt
+License File:                LICENSE
 Package Category:            BSP
 Type of Content:             source
 Description and comments:    DPDK Fast Path Routing
@@ -637,7 +637,7 @@ Origin:                      NXP (BSD-3-Clause)
 
 --------------------------------------------
 
-Package:                     obx-imx-ipc.git
+Package:                     obx_imx_ipc.git
 Version:                     6.6
 Outgoing License:            GPL-2.0 
 License File:                LICENSE.txt
@@ -647,7 +647,7 @@ Description and comments:    SPI IPC utility (using spide driver)
 Release Location:            https://github.com/nxp-imx/obx_imx_ipc -b v1.0
 --------------------------------------------
 
-Package:                     obx-statstool.git
+Package:                     obx_statstool.git
 Version:                     6.6
 Outgoing License:            BSD-3-Clause 
 License File:                LICENSE.txt
@@ -919,7 +919,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 Package:                     imx-g2d-pxp.git
 Version:                     2.2
-Outgoing License:            LA_OPT_NXP_Software_License v56 April 2024 Additional distribution license granted - Section 2.3 applies
+Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                LICENSE.txt
 Package Category:            Graphics
 Type of Content:             source
@@ -1144,7 +1144,7 @@ Origin:                      NXP (LA_OPT_NXP_Software_License)
 
 Package:                     imx-vpuwrap.git
 Version:                     git
-Outgoing License:            LA_OPT_NXP_Software_License v56 April 2024 Additional distribution license granted - Section 2.3 applies
+Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 Additional distribution license granted - Section 2.3 applies
 License File:                LICENSE.txt
 Package Category:            Multimedia
 Type of Content:             source
@@ -1580,7 +1580,7 @@ Origin:                      NXP (MIT)
 Package:                     neutron.git
 Version:                     1.0.0
 Outgoing License:            LA_OPT_NXP_Software_License v57 July 2024 
-License File:                LICENSE
+License File:                LICENSE.txt
 Package Category:            MachineLearning
 Type of Content:             source
 Description and comments:    The firmware library and converter for i.MX Neutron NPU
