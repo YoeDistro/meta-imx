@@ -645,6 +645,9 @@ Package Category:            BSP
 Type of Content:             source
 Description and comments:    SPI IPC utility (using spide driver)
 Release Location:            https://github.com/nxp-imx/obx_imx_ipc -b v1.0
+Origin:                      NXP (GPL-2.0)
+                             kernel.org (GPL-2.0) - https://www.kernel.org/ (linux kernel file referred: tools/spi/spidev_test.c)
+
 --------------------------------------------
 
 Package:                     obx_statstool.git
@@ -655,6 +658,8 @@ Package Category:            BSP
 Type of Content:             source
 Description and comments:    Stats tool for OrangeBox
 Release Location:            https://github.com/nxp-imx/obx_statstool -b v1.0
+Origin:                      NXP (BSD-3-Clause)
+
 --------------------------------------------
 Graphics Packages
 --------------------------------------------
